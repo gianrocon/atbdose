@@ -1,6 +1,16 @@
 {%  extends 'base.html' %}
 {% block main %}
 
-    Ajuste Dose
-
+    <h5>Clearence de Creatinina (opcional)</h5>
+    <form method="POST">
+            {% csrf_token %}
+            <table class="table">
+                {{ form.as_table }}
+            </table>
+            <br>
+            <button class="btn btn-success btn-sm" type="submit">Calcular</button>
+            <a class="btn btn-warning btn-sm" href="{%  url 'ajuste_dose:ajustedose' %}">Limpar</a>
+        </form>
+        <br>
+        <h4>ClCr: {% if clcr %}{{ clcr|floatformat:2 }}{%  else %}Supostamente Normal{% endif %}</h4>
 {% endblock main %}
