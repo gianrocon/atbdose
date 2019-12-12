@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -86,3 +87,5 @@ DECIMAL_SEPARATOR = '.'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+django_heroku.settings(locals())
