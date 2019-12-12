@@ -1,7 +1,7 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '83b0e05770584a07332b82da80ea9919c1297cfa633bc538'
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -73,12 +73,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = False
 DECIMAL_SEPARATOR = '.'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
