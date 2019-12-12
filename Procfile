@@ -1,0 +1,1 @@
+web: gunicorn ajuste_dose_proj.wsgi
