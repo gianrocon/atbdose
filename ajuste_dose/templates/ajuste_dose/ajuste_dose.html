@@ -1,16 +1,18 @@
 {%  extends 'base.html' %}
 {% block main %}
 
-    <h5>Clearence de Creatinina (opcional)</h5>
     <form method="POST">
             {% csrf_token %}
-            <table class="table">
+            <table class="table table-sm">
                 {{ form.as_table }}
             </table>
-            <br>
             <button class="btn btn-success btn-sm" type="submit">Calcular</button>
             <a class="btn btn-warning btn-sm" href="{%  url 'ajuste_dose:ajustedose' %}">Limpar</a>
+            <a class="btn btn-primary btn-sm" href="?hd=sim">Hemodiálise</a>
         </form>
-        <br>
-        <h4>ClCr: {% if clcr %}{{ clcr|floatformat:2 }}{%  else %}Supostamente Normal{% endif %}</h4>
+
+        <br><br>
+
+
+    {% include 'ajuste_dose/atb_table.html' %}
 {% endblock main %}
