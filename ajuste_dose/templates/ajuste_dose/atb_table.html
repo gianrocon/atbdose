@@ -3,13 +3,13 @@
 <table class="table table-sm">
     <tr>
         <th>Antibiótico</th>
-        <th>Dose</th>
+        <th>Dose Intervalo</th>
         <th>Obs</th>
     </tr>
     {% for v in dose_dict.values %}
     <tr>
         <td>{{v.nome}}</td>
-        <td>{{v.dose}}mg {{v.intervalo}}/{{v.intervalo}}h</td><td>{{v.obs}}</td>
+        <td>{{v.dose}} {{v.intervalo}}</td><td>{{v.obs}}</td>
     </tr>
     {% endfor %}
 </table>
