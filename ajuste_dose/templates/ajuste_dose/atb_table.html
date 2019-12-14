@@ -6,84 +6,10 @@
         <th>Dose</th>
         <th>Obs</th>
     </tr>
+    {% for v in dose_dict.values %}
     <tr>
-        <td>Ampicilina-Sulbactam</td>
-        <td>{{asb.dose}}mg {{asb.intervalo}}/{{asb.intervalo}}h</td><td>{{ asb.obs }}</td>
+        <td>{{v.nome}}</td>
+        <td>{{v.dose}}mg {{v.intervalo}}/{{v.intervalo}}h</td><td>{{v.obs}}</td>
     </tr>
-    <tr>
-        <td>Amoxicilina-Clavulanato (Oral)</td>
-        <td>{{amc_oral.dose}}mg {{amc_oral.intervalo}}/{{amc_oral.intervalo}}h</td><td>{{ amc_oral.obs }}</td>
-    </tr>
-    <tr>
-        <td>Amoxicilina-Clavulanato (IV)</td>
-        <td>{{amc_iv.dose}}mg {{amc_iv.intervalo}}/{{amc_iv.intervalo}}h</td><td>{{ amc_iv.obs }}</td>
-    </tr>
-    <tr>
-        <td>Aztreonam</td>
-        <td>{{atm.dose}}mg {{atm.intervalo}}/{{atm.intervalo}}h</td><td>{{ atm.obs }}</td>
-    </tr>
-    <tr>
-        <td>Cefalotina</td>
-        <td></td><td></td>
-    </tr>
-    <tr>
-        <td>Cefazolina</td>
-        <td>{{cfz.dose}}mg {{cfz.intervalo}}/{{cfz.intervalo}}h</td><td>{{ cfz.obs }}</td>
-    </tr>
-    <tr>
-        <td>Cefepime</td>
-        <td>{{cpm.dose}}mg {{cpm.intervalo}}/{{cpm.intervalo}}h</td><td>{{ cpm.obs }}</td>
-    </tr>
-    <tr>
-        <td>Ceftazidima</td>
-        <td>{{caz.dose}}mg {{caz.intervalo}}/{{caz.intervalo}}h</td><td>{{ caz.obs }}</td>
-    </tr>
-    <tr>
-        <td>Ceftriaxone</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Cefuroxima</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ciprofloxacino</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fosfomicina</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Imipenem</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Levofloxacino</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Meropenem</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Nitrofurantoína</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Piperacilina-tazobactam</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Polimixina</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Teicoplanina</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Vancomicina</td>
-        <td></td>
-    </tr>
+    {% endfor %}
 </table>
